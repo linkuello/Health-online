@@ -17,6 +17,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="4108029019" />
+    <orderEntry type="module" module-name="django-taggit-tutorial-master" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />
