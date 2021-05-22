@@ -14,10 +14,10 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="4108029019" />
-    <orderEntry type="module" module-name="django-taggit-tutorial-master" />
+    <orderEntry type="module" module-name="materialize-gallery-theme-master" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />

@@ -16,19 +16,20 @@ def home_view(request):
         newpost.slug = slugify(newpost.title)
         newpost.save()
         form.save_m2m()
+
     context = {
         'posts':posts,
         'common_tags':common_tags,
         'form':form,
     }
-    return render(request, 'home.html', context)
+    return render(request, 'blog/home.html', context)
 
 def detail_view(request, slug):
     post = get_object_or_404(Post, slug=slug)
     context = {
         'post':post,
     }
-    return render(request, 'detail.html', context)
+    return render(request, 'blog/detail.html', context)
 
 def tagged(request, slug):
     tag = get_object_or_404(Tag, slug=slug)
@@ -39,4 +40,21 @@ def tagged(request, slug):
         'common_tags':common_tags,
         'posts':posts,
     }
-    return render(request, 'home.html', context)
+    return render(request, 'blog/home.html', context)
+
+
+def test(request):
+    posts = Post.objects.all()
+    common_tags = Tag.objects.all()
+    form = PostForm(request.POST)
+    if form.is_valid():
+        newpost = form.save(commit=False)
+        newpost.slug = slugify(newpost.title)
+        newpost.save()
+        form.save_m2m()
+    context = {
+        'posts': posts,
+        'common_tags': common_tags,
+        'form': form,
+    }
+    return render(request, 'blog/index.html', locals())
