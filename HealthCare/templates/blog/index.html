@@ -48,8 +48,8 @@
             <div class="gallery-curve-wrapper">
                 <a class="gallery-cover gray" style="height: 250px;">
                   <!--    ##################################################################################################-->
-                {% if post.url %}
-                    <img src="{{ post.url }}" alt="placeholder">
+                {% if post.pic.url %}
+                    <img src="{{ post.pic.url }}" alt="placeholder">
                 {% else %}
                     <img src="http://placehold.it/1280x500" alt="placeholder">
                 {% endif %}
@@ -75,13 +75,30 @@
                         {{ post.content | linebreaks}}
                     </h6>
 
-                    {% if post.url %}
+                    {% if post.pic.url %}
                         <br>
-                        <img src="{{ post.url }}">
+                        <img src="{{ post.pic.url }}" width="100%">
                         <br>
                     {% endif %}
 
                     <span>{{ post.published }}</span>
+                    <br>
+
+                    <h3>Comment</h3>
+                    {% for comment in post.comments.all %}
+                        <p>
+                            <strong>{{ comment.name }}</strong>
+                            <small>{{ comment.date_added }}</small>
+                            <br>
+                            {{ comment.body }}
+                        </p>
+                    {% empty %}
+                        <div class="container">
+                            <p>No Comment Yet!</p>
+                        </div>
+                    {% endfor %}
+                    <br>
+                    
                 </div>
 
                 <!--    ##################################################################################################-->

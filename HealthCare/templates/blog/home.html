@@ -3,7 +3,7 @@
 {% block content %}
     <a href="/"><h3>Homepage</h3></a>
         <div class="container pt-5">
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
                     <label>Title</label>
@@ -18,8 +18,8 @@
                     <textarea type="text" class="form-control" name="content" placeholder="(Post Content)"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>Image Url</label>
-                    <textarea type="text" class="form-control" name="url" placeholder="Img url"></textarea>
+                    <label class="form-label" for="customFile">Picture</label>
+                    <input type="file" class="form-control" name="pic" accept="image/*" ">
                 </div>
                 <div class="form-group">
                     <label>Tags</label>

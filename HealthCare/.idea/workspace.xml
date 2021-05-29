@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00085ad-3b33-4ce8-a23e-bd454c6721dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/migrations/0003_auto_20210523_0040.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -49,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="last_opened_file_path" value="$USER_HOME$/文档/new_site" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -103,6 +102,7 @@
       <workItem from="1621351723335" duration="1793000" />
       <workItem from="1621499997836" duration="1221000" />
       <workItem from="1621671098729" duration="24741000" />
+      <workItem from="1621920009358" duration="1968000" />
     </task>
     <servers />
   </component>
