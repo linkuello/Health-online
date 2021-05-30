@@ -1,7 +1,19 @@
 from django.db import models
 from taggit.managers import TaggableManager
 
+class Categories(models.Model):
+    categories = (
+        ('Sport', 'SPORT'),
+        ('Weight Lost', 'WEIGHT LOST'),
+        ('Nutrition', 'NUTRITION'),
+    )
+    category = models.CharField(max_length=50, choices=categories)
+
+    def __str__(self):
+        return self.category
+
 class Post(models.Model):
+    category = models.ForeignKey(Categories, related_name='posts', on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=250)
     slug = models.SlugField(unique=True, max_length=100)
     description = models.TextField(max_length=250)
@@ -25,3 +37,6 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['-date_added']
+
+    def __str__(self):
+        return self.email

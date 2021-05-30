@@ -6,6 +6,14 @@
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
+                    <label>Category</label>
+                    <select name="category">
+                        {% for c in categories %}
+                            <option value="{{ c.pk }}">{{ c }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
                     <label>Title</label>
                     <input type="text" class="form-control" name="title" placeholder="Add title">
                 </div>

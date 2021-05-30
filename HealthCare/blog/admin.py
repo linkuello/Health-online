@@ -1,10 +1,16 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, Categories
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title', 'description', 'enabled', 'published')
     ordering = ('-published',)
 
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('post', 'email', 'date_added')
+    ordering = ('-date_added',)
+
+
+admin.site.register(Comment, CommentAdmin)
 admin.site.register(Post, PostAdmin)
-admin.site.register(Comment)
+admin.site.register(Categories)

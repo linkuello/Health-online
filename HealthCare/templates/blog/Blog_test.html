@@ -20,6 +20,13 @@
     t={{ c_t }}
    form = {{ form }}
 </h4>
+        <form name="myform" action="." method="POST">
+            <table>
+                {% csrf_token %}
+            {{ post_form.as_table }}
+            </table>
+
+        </form>
 
         <div class="container">
             <form method="POST">

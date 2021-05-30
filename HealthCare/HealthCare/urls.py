@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog.views import home_view, detail_view, tagged, homepage, test
+from blog.views import home_view, detail_view, tagged, homepage, test, blog_sport, blog_weight_lost
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -25,6 +25,8 @@ urlpatterns = [
     path('blog/post/<slug:slug>/', detail_view, name="detail"),
     path('blog/tag/<slug:slug>/', tagged, name="tagged"),
     path('', homepage),
-    path('test/', test)
+    path('sport', blog_sport),
+    path('weight_lost', blog_weight_lost),
+    path('test/', test),
 
 ] + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)
