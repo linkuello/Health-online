@@ -1,15 +1,16 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
-from .models import Post, Categories
+from .models import Post, Categories, Likes
 from .forms import PostForm, CommentForm
 from blog import models
 from taggit.models import Tag
 from django.template.defaultfilters import slugify
-
+from django.contrib.auth.decorators import login_required
+from django.contrib import auth
 
 def home_view(request):
     categories = Categories.objects.all()
-    posts = Post.objects.all().order_by('-published', )
+    posts = Post.objects.all().filter(enabled=True).order_by('-published', )
     common_tags = Post.tags.most_common()[:4]
     form = PostForm(request.POST, request.FILES)
     post_form = PostForm()
@@ -54,17 +55,18 @@ def detail_view(request, slug):
 def tagged(request, slug):
     tag = get_object_or_404(Tag, slug=slug)
     common_tags = Post.tags.most_common()[:4]
-    posts = Post.objects.filter(tags=tag)
+    posts = Post.objects.filter(enabled=True).filter(tags=tag)
     context = {
         'tag': tag,
         'common_tags': common_tags,
         'posts': posts,
     }
+
     return render(request, 'blog/home.html', context)
 
 
 def homepage(request):
-    posts = Post.objects.all().filter(category='3').order_by('-published', )
+    posts = Post.objects.all().filter(category='3').filter(enabled=True).order_by('-published', )
     common_tags = Tag.objects.all()
     form_c = CommentForm()
 
@@ -75,7 +77,6 @@ def homepage(request):
         comment_body = request.POST['body']
     except:
         post_slug = None
-        message = "Error"
 
     if request.method == 'POST' and post_slug is not None:
         post = models.Post.objects.get(slug=post_slug)
@@ -86,7 +87,7 @@ def homepage(request):
 
 
 def blog_sport(request):
-    posts = Post.objects.all().filter(category='1').order_by('-published', )
+    posts = Post.objects.all().filter(category='1').filter(enabled=True).order_by('-published', )
     common_tags = Tag.objects.all()
     form_c = CommentForm()
 
@@ -97,7 +98,6 @@ def blog_sport(request):
         comment_body = request.POST['body']
     except:
         post_slug = None
-        message = "Error"
 
     if request.method == 'POST' and post_slug is not None:
         post = models.Post.objects.get(slug=post_slug)
@@ -108,7 +108,7 @@ def blog_sport(request):
 
 
 def blog_weight_lost(request):
-    posts = Post.objects.all().filter(category='2').order_by('-published', )
+    posts = Post.objects.all().filter(category='2').filter(enabled=True).order_by('-published', )
     common_tags = Tag.objects.all()
     form_c = CommentForm()
 
@@ -119,7 +119,6 @@ def blog_weight_lost(request):
         comment_body = request.POST['body']
     except:
         post_slug = None
-        message = "Error"
 
     if request.method == 'POST' and post_slug is not None:
         post = models.Post.objects.get(slug=post_slug)
@@ -127,6 +126,27 @@ def blog_weight_lost(request):
         comment_post.save()
 
     return render(request, 'blog/weight_lost.html', locals())
+
+
+@login_required(login_url='login')
+def like(request, slug):
+    user = request.user
+    post = get_object_or_404(Post, slug=slug)
+    current_likes = post.likes
+    liked = Likes.objects.filter(user=user, post=post).count()
+
+    if not liked:
+        like = Likes.objects.create(user=user, post=post)
+        current_likes = current_likes + 1
+
+    else:
+        Likes.objects.filter(user=user, post=post).delete()
+        current_likes = current_likes - 1
+
+    post.likes = current_likes
+    post.save()
+
+    return redirect('blog_homepage')
 
 
 def test(request):

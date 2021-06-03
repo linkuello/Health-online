@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'blog',
     'taggit',
     'media',
+    'calories.apps.CaloriesConfig',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
