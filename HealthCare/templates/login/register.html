@@ -26,9 +26,6 @@
                 <input class="btn btn-primary btn-large btn-block" type="submit" name="Register">
 
             </form>
-            {% for message in messages %}
-                    <p id="messages">{{message}}</p>
-            {% endfor %}
             {{ form.errors }}
             <div class="d-flex justify-content-center links mt-8">
             Already have an account? <a href="{% url 'login' %}" class="ml-4">Login</a>

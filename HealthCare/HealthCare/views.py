@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponseRedirect
 from calories.forms import CreateUserForm
+from django.contrib import messages
 
 
 def homepage(request):
