@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf.urls import url
 from django.conf.urls.static import static
 from django.conf import settings
-from .views import homepage, like
+from .views import homepage, like, LoginPage, LogOutPage, RegisterPage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +26,8 @@ urlpatterns = [
     path('', homepage, name='homepage'),
     path('home_like/<slug:slug>/', like, name='postlike_home'),
     path('calories/', include('calories.urls')),
+    path('login/', LoginPage, name='login'),
+    path('logout/', LogOutPage, name='logout'),
+    path('register/', RegisterPage, name='register'),
 
 ] + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)

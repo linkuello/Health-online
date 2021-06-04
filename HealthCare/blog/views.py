@@ -8,11 +8,15 @@ from django.template.defaultfilters import slugify
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth
 
+
+@login_required(login_url='login')
 def home_view(request):
+    user = request.user
     categories = Categories.objects.all()
-    posts = Post.objects.all().filter(enabled=True).order_by('-published', )
+    posts = Post.objects.all().order_by('-published', ).filter(enabled=True)
+    post_author = Post(author=user)
     common_tags = Post.tags.most_common()[:4]
-    form = PostForm(request.POST, request.FILES)
+    form = PostForm(request.POST, request.FILES, instance=post_author)
     post_form = PostForm()
     if form.is_valid():
         newpost = form.save(commit=False)
@@ -20,16 +24,12 @@ def home_view(request):
         newpost.save()
         form.save_m2m()
 
-    context = {
-        'posts': posts,
-        'common_tags': common_tags,
-        'form': form,
-        'categories': categories,
-    }
     return render(request, 'blog/home.html', locals())
 
 
+@login_required(login_url='login')
 def detail_view(request, slug):
+    user = request.user
     post = get_object_or_404(Post, slug=slug)
 
     if request.method == "POST":
@@ -48,11 +48,14 @@ def detail_view(request, slug):
     context = {
         'post': post,
         'form': form,
+        'user': user,
     }
     return render(request, 'blog/detail.html', context)
 
 
+@login_required(login_url='login')
 def tagged(request, slug):
+    user = request.user
     tag = get_object_or_404(Tag, slug=slug)
     common_tags = Post.tags.most_common()[:4]
     posts = Post.objects.filter(enabled=True).filter(tags=tag)
@@ -60,6 +63,7 @@ def tagged(request, slug):
         'tag': tag,
         'common_tags': common_tags,
         'posts': posts,
+        'user': user,
     }
 
     return render(request, 'blog/home.html', context)

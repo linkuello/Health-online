@@ -3,9 +3,16 @@ from blog.models import Post, Categories, Likes
 from blog.forms import CommentForm
 from blog import models
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate,login,logout
+from django.http import HttpResponseRedirect
+from calories.forms import CreateUserForm
 
 
 def homepage(request):
+    if request.user is not None:
+        user = request.user
+        username = user.username
+
     blog_posts = Post.objects.all().filter(enabled=True).order_by('-published',)[:3]
     form_c = CommentForm()
 
@@ -45,3 +52,46 @@ def like(request, slug):
     post.save()
 
     return redirect('homepage')
+
+
+def LoginPage(request):
+
+    if request.user.is_authenticated:
+        return redirect('homepage')
+    else:
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request,username=username,password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('homepage')
+            else:
+                messages.info(request, 'Username or password is incorrect')
+        context = {}
+        return render(request, 'login/login.html', context)
+
+
+
+def LogOutPage(request):
+    logout(request)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+
+def RegisterPage(request):
+    if request.user.is_authenticated:
+        return redirect('homepage')
+    else:
+        form = CreateUserForm()
+        if request.method == 'POST':
+            form = CreateUserForm(request.POST)
+            if form.is_valid():
+                form.save()
+                user = form.cleaned_data.get('username')
+                messages.success(request,"Account was created for "+ user)
+                return redirect('login')
+
+        context = {'form':form}
+
+        return render(request, 'login/register.html', context)

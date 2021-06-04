@@ -9,6 +9,7 @@ from django.utils import timezone
 from datetime import date
 from datetime import datetime
 from .filters import FoodFilter
+from django.http import HttpResponseRedirect
 
 #home page view
 @login_required(login_url='login')
@@ -83,7 +84,7 @@ def LoginPage(request):
 #logout page
 def LogOutPage(request):
 	logout(request)
-	return redirect('login')
+	return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 #for selecting food each day
 @login_required

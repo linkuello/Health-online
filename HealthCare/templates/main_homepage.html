@@ -3,6 +3,8 @@
 {% load static %}
 {% block Top_background %}
         <img class="active" src="{% static 'images/main_picture.jpg' %}" alt="cityscape">
+        <img src="{% static 'images/main_calories.jpg' %}" alt="cityscape">
+        <img src="{% static 'images/main_sport.jpg' %}" alt="cityscape">
 {% endblock %}
 {% block color1 %}teal{% endblock %}
 {% block color2 %}amber{% endblock %}
@@ -10,17 +12,22 @@
   <li><a href="calories/">Calories</a></li>
   <li><a href="myblog/">Blog</a></li>
   <li><a href="#">Sport</a></li>
-  <li><a href="account/">Login</a></li>
-  <li class="active"><a class='dropdown-button' href='#' data-activates='feature-dropdown' data-belowOrigin="true" data-constrainWidth="false">Features<i class="material-icons right">arrow_drop_down</i></a></li>
+    {% if username %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        <li class="active"><a class='dropdown-button' href='#' data-activates='feature-dropdown' data-belowOrigin="true" data-constrainWidth="false">Hi, {{ username | upper }}<i class="material-icons right">arrow_drop_down</i></a></li>
+    {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+    {% endif %}
+
 
 {% endblock %}
 
 {% block Top_href_drop %}
-<ul id='feature-dropdown' class='dropdown-content'>
-{#  <li><a href="main_homepage.html">Fullscreen Header</a></li>#}
-{#  <li><a href="horizontal.html">Horizontal Style</a></li>#}
-{#  <li><a href="no-image.html">No Image Expand</a></li>#}
-</ul>
+    {% if username %}
+        <ul id='feature-dropdown' class='dropdown-content'>
+          <li><a href="{% url 'profile'%}">My Profile</a></li>
+        </ul>
+    {% endif %}
 {% endblock %}
 
 {% block header_title %}
@@ -88,7 +95,7 @@
                   <h3>{{ post.slug }}</h3>
                 </div>
                 <h6 class="description">
-                        {{ post.content | linebreaks}}
+                        {{ post.content | linebreaks | safe }}
                 </h6>
 
                 {% if post.pic.url %}

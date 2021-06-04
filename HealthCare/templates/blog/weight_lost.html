@@ -70,7 +70,7 @@
                     </div>
 
                     <h6 class="description">
-                        {{ post.content | linebreaks}}
+                        {{ post.content | linebreaks | safe }}
                     </h6>
 
                     {% if post.pic.url %}
