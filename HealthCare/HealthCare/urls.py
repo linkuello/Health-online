@@ -21,13 +21,17 @@ from django.conf import settings
 from .views import homepage, like, LoginPage, LogOutPage, RegisterPage
 
 urlpatterns = [
+    path('login/<str:page>', LoginPage),
+    path('login/', LoginPage, name='login'),
+    path('login/post_homepage', LoginPage, name='login/post_homepage'),
+    path('login/blog_homepage', LoginPage, name='login/blog_homepage'),
+    #####################################################################
     path('admin/', admin.site.urls),
-    url(r'myblog/', include('blog.urls')),
     path('', homepage, name='homepage'),
     path('home_like/<slug:slug>/', like, name='postlike_home'),
-    path('calories/', include('calories.urls')),
-    path('login/', LoginPage, name='login'),
     path('logout/', LogOutPage, name='logout'),
     path('register/', RegisterPage, name='register'),
+    path('calories/', include('calories.urls')),
+    url(r'myblog/', include('blog.urls')),
 
 ] + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)

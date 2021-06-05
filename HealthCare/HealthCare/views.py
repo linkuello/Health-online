@@ -55,10 +55,9 @@ def like(request, slug):
     return redirect('homepage')
 
 
-def LoginPage(request):
-
+def LoginPage(request, page=''):
     if request.user.is_authenticated:
-        return redirect('homepage')
+        return redirect(page)
     else:
         if request.method == 'POST':
             username = request.POST.get('username')
@@ -66,7 +65,10 @@ def LoginPage(request):
             user = authenticate(request,username=username,password=password)
             if user is not None:
                 login(request, user)
-                return redirect('homepage')
+                if page == '':
+                    return redirect('homepage')
+                else:
+                    return redirect(page)
             else:
                 messages.info(request, 'Username or password is incorrect')
         context = {}

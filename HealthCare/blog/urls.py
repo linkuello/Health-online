@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('blog/', home_view, name="home"),
+    path('blog/', home_view, name="post_homepage"),
     path('blog/post/<slug:slug>/', detail_view, name="detail"),
     path('like/<slug:slug>/', like, name='postlike'),
     path('blog/tag/<slug:slug>/', tagged, name="tagged"),
