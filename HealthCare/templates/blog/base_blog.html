@@ -33,13 +33,39 @@
         <a href="/" class="brand-logo"><i class="material-icons">home</i>Home</a>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
+            {% with url_name=request.resolver_match.url_name %}
+                <li {% if url_name == 'blog_homepage' %}class="active"{% endif %}><a href="{% url 'blog_homepage' %}">Nutrition</a></li>
+                <li {% if url_name == 'blog_sport' %}class="active"{% endif %}><a href="{% url 'blog_sport' %}">Sport</a></li>
+                <li {% if url_name == 'blog_weight_lost' %}class="active"{% endif %}><a href="{% url 'blog_weight_lost' %}">Weight Lost</a></li>
+                <li><a class='dropdown-button' href='#' data-activates='feature-dropdown' data-belowOrigin="true" data-constrainWidth="false">
+                    {% if username %}
+                        Hi, {{ username | upper }}
+                    {% else %}
+                        Features
+                    {% endif %}
+                    <i class="material-icons right">arrow_drop_down</i></a></li>
+            {% endwith %}
+
             {% block Top_href %}
 
             {% endblock %}
         </ul>
         <!-- Dropdown Structure -->
+        <ul id='feature-dropdown' class='dropdown-content'>
+            {% if username %}
+                {% with url_name=request.resolver_match.url_name %}
+                    <li {% if url_name == 'blog_show_my_posts' %}class="active"{% endif %}><a href="{% url 'blog_show_my_posts' %}">My Post</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% endwith %}
+            {% else %}
+                {% with url_name=request.resolver_match.url_name %}
+                    {% if url_name == 'blog_homepage' %}<li><a href="{% url 'login/blog_homepage' %}">Login</a></li>{% endif %}
+                    {% if url_name == 'blog_sport' %}<li><a href="{% url 'login/blog_sport' %}">Login</a></li>{% endif %}
+                    {% if url_name == 'blog_weight_lost' %}<li><a href="{% url 'login/blog_weight_lost' %}">Login</a></li>{% endif %}
+                {% endwith %}
+            {% endif %}
+        </ul>
             {% block Top_href_drop %}
-
             {% endblock %}
         <div class="nav-header center">
             {% block header_title %}
@@ -60,6 +86,26 @@
       </div>
     </nav>
     <ul class="side-nav" id="nav-mobile">
+        {% with url_name=request.resolver_match.url_name %}
+            <li {% if url_name == 'blog_homepage' %}class="active"{% endif %}><a href="{% url 'blog_homepage' %}"><i class="material-icons">restaurant_menu</i>Nutrition</a></li>
+            <li {% if url_name == 'blog_sport' %}class="active"{% endif %}><a href="{% url 'blog_sport' %}"><i class="material-icons">watch</i>Sport</a></li>
+            <li {% if url_name == 'blog_weight_lost' %}class="active"{% endif %}><a href="{% url 'blog_weight_lost' %}"><i class="material-icons">directions_bike</i>Weight Lost</a></li>
+        {% endwith %}
+
+        {% if username %}
+            {% with url_name=request.resolver_match.url_name %}
+                <li><a class="subheader"><i class="material-icons">perm_identity</i>Hi, {{ username | upper }}</a></li>
+                <li {% if url_name == 'blog_show_my_posts' %}class="active"{% endif %}><a href="{% url 'blog_show_my_posts' %}">My Post</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% endwith %}
+        {% else %}
+            {% with url_name=request.resolver_match.url_name %}
+                {% if url_name == 'blog_homepage' %}<li><a href="{% url 'login/blog_homepage' %}">Login</a></li>{% endif %}
+                {% if url_name == 'blog_sport' %}<li><a href="{% url 'login/blog_sport' %}">Login</a></li>{% endif %}
+                {% if url_name == 'blog_weight_lost' %}<li><a href="{% url 'login/blog_weight_lost' %}">Login</a></li>{% endif %}
+            {% endwith %}
+        {% endif %}
+
         {% block drop_menu %}
 
         {% endblock %}

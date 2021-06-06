@@ -1,18 +1,13 @@
 {% extends 'blog/base_blog.html' %}
-{% block title %} Blog|Weight Lost {% endblock %}
+{% block title %} Blog|My Posts {% endblock %}
 {% load static %}
 {% block Top_background %}{% static 'images/background_picture.jpg' %}{% endblock %}
-{% block color1 %}red{% endblock %}
-{% block color2 %}red{% endblock %}
+{% block color1 %}blue{% endblock %}
+{% block color2 %}blue{% endblock %}
 {% block Top_href %}
 {% endblock %}
 
 {% block Top_href_drop %}
-{#    <ul id='feature-dropdown' class='dropdown-content'>#}
-{#      <li><a href="main_homepage.html">Fullscreen Header</a></li>#}
-{#      <li><a href="horizontal.html">Horizontal Style</a></li>#}
-{#      <li><a href="no-image.html">No Image Expand</a></li>#}
-{#    </ul>#}
 {% endblock %}
 
 {% block header_title %}
@@ -53,6 +48,9 @@
                     <span>{{ post.description | truncatechars:100 }}</span>
                     <br>
                     <span>{{ post.likes }} Likes</span>
+                    <br>
+                    <br>
+                    <a href="{% url 'blog_delete_my_posts' id=post.id %}">Delete</a>
                   <!--    ##################################################################################################-->
                 </div>
 

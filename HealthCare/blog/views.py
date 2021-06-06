@@ -70,6 +70,9 @@ def tagged(request, slug):
 
 
 def homepage(request):
+    if request.user is not None:
+        user = request.user
+        username = user.username
     posts = Post.objects.all().filter(category='3').filter(enabled=True).order_by('-published', )
     common_tags = Tag.objects.all()
     form_c = CommentForm()
@@ -91,6 +94,9 @@ def homepage(request):
 
 
 def blog_sport(request):
+    if request.user is not None:
+        user = request.user
+        username = user.username
     posts = Post.objects.all().filter(category='1').filter(enabled=True).order_by('-published', )
     common_tags = Tag.objects.all()
     form_c = CommentForm()
@@ -112,6 +118,9 @@ def blog_sport(request):
 
 
 def blog_weight_lost(request):
+    if request.user is not None:
+        user = request.user
+        username = user.username
     posts = Post.objects.all().filter(category='2').filter(enabled=True).order_by('-published', )
     common_tags = Tag.objects.all()
     form_c = CommentForm()
@@ -151,6 +160,43 @@ def like(request, slug):
     post.save()
 
     return redirect('blog_homepage')
+
+
+@login_required(login_url='login/blog_show_my_posts')
+def show_my_posts(request):
+    user = request.user
+    username = user.username
+    posts = Post.objects.all().filter(author=user).order_by('-published', )
+    common_tags = Tag.objects.all()
+    form_c = CommentForm()
+
+    try:
+        post_slug = request.POST['slug']
+        comment_name = request.POST['name']
+        comment_email = request.POST['email']
+        comment_body = request.POST['body']
+    except:
+        post_slug = None
+
+    if request.method == 'POST' and post_slug is not None:
+        post = models.Post.objects.get(slug=post_slug)
+        comment_post = models.Comment.objects.create(post=post, name=comment_name, body=comment_body,
+                                                     email=comment_email)
+        comment_post.save()
+
+    return render(request, 'blog/my_posts.html', locals())
+
+
+def delete_my_posts(request, id=None):
+    if id:
+        try:
+            post = models.Post.objects.get(id=id)
+        except:
+            post = None
+        if post:
+            post.delete()
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 def test(request):

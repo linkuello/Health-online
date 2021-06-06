@@ -25,6 +25,9 @@ urlpatterns = [
     path('login/', LoginPage, name='login'),
     path('login/post_homepage', LoginPage, name='login/post_homepage'),
     path('login/blog_homepage', LoginPage, name='login/blog_homepage'),
+    path('login/blog_show_my_posts', LoginPage, name='login/blog_show_my_posts'),
+    path('login/blog_weight_lost', LoginPage, name='login/blog_weight_lost'),
+    path('login/blog_sport', LoginPage, name='login/blog_sport'),
     #####################################################################
     path('admin/', admin.site.urls),
     path('', homepage, name='homepage'),
