@@ -40,8 +40,20 @@ INSTALLED_APPS = [
     'blog',
     'taggit',
     'media',
+    'recipe',
+    'fitforum',
     'calories.apps.CaloriesConfig',
-    'django_filters'
+    'django_filters',
+    'captcha',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.github',
+    'allauth.socialaccount.providers.facebook',
+    'registration',
+    'materializecssform',
+
 ]
 
 MIDDLEWARE = [
@@ -84,6 +96,25 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+#  Auth Login
+ACCOUNT_ACTIVATION_DAYS = 7
+EMAIL_HOST= 'smtp.gmail.com'
+EMAIL_HOST_PASSWORD= 'wgsmpgugogthhlhh'
+EMAIL_HOST_USER	= 'cscheng5282@gmail.com'
+EMAIL_PORT= 587
+EMAIL_USE_TLS = True
+
+SITE_ID=1
+LOGIN_REDIRECT_URL= '/'
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
 
 
 # Password validation

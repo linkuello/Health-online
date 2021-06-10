@@ -2,8 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00085ad-3b33-4ce8-a23e-bd454c6721dc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fitforum/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/migrations/0002_video.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/migrations/0003_remove_video_level.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/migrations/0004_auto_20210609_1511.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/migrations/0005_delete_video.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/migrations/0006_auto_20210610_1221.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/migrations/0007_auto_20210610_1628.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/2021-05-25_21-53-14_的屏幕截图.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/pics/2021-06-10_02-16-29_的屏幕截图.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/pics/2021-06-10_02-16-29_的屏幕截图_EVZkB5C.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/migrations/0002_alter_food_image_url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/migrations/0003_alter_food_image_url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/migrations/0004_auto_20210605_1623.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/migrations/0005_alter_food_image_url.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/migrations/0006_auto_20210610_1221.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/migrations/0007_auto_20210610_1313.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/account_inactive.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/base_message.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_message.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_signup_message.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_signup_subject.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/email_confirmation_subject.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/password_reset_key_message.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email/password_reset_key_subject.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/email_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/cannot_delete_primary_email.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/email_confirmation_sent.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/email_confirmed.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/email_deleted.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/logged_in.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/logged_out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/password_changed.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/password_set.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/primary_email_set.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/messages/unverified_primary_email.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_change.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_reset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_reset_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_reset_from_key.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_reset_from_key_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/password_set.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/signup_closed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/snippets/already_logged_in.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/verification_sent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/account/verified_email_required.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/calories/base_calories.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fitforum/fitness.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fitforum/fitness_category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fitforum/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fitforum/yoga.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/fitforum/yoga_category.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login/login2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/openid/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/openid/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipe/addrecipe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipe/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipe/foods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/recipe/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/activate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/activate_email.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/activation_complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/activation_email_subject.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/registration_complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/registration_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/authentication_error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/connections.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/login_cancelled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/messages/account_connected.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/messages/account_connected_other.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/messages/account_connected_updated.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/messages/account_disconnected.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/snippets/login_extra.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/socialaccount/snippets/provider_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/tests/test_403_csrf.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HealthCare/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HealthCare/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HealthCare/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HealthCare/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HealthCare/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/HealthCare/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calories/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/calories/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calories/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/calories/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/my_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/my_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/calories/add_food.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/calories/add_food.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/calories/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/calories/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/calories/delete_food.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/calories/delete_food.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/calories/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/calories/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/calories/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/calories/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/calories/select_food.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/calories/select_food.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login/login_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/login_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main_homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main_homepage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,16 +163,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/文档/new_site" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/fitforum" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/fitforum" />
+      <recent name="$PROJECT_DIR$/templates/calories" />
+      <recent name="$PROJECT_DIR$/templates/login" />
       <recent name="$USER_HOME$/4108029019/4108029019/mynewsite/static/mat" />
       <recent name="$PROJECT_DIR$/templates/blog" />
-      <recent name="$USER_HOME$/materialize-gallery-theme-master" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/blog" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
@@ -103,6 +218,11 @@
       <workItem from="1621499997836" duration="1221000" />
       <workItem from="1621671098729" duration="24741000" />
       <workItem from="1621920009358" duration="1968000" />
+      <workItem from="1623155574054" duration="975000" />
+      <workItem from="1623162994970" duration="597000" />
+      <workItem from="1623211024681" duration="6794000" />
+      <workItem from="1623243399534" duration="18055000" />
+      <workItem from="1623292402195" duration="20670000" />
     </task>
     <servers />
   </component>
@@ -166,6 +286,11 @@
           <url>file://$PROJECT_DIR$/templates/blog/index.html</url>
           <line>44</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/blog/urls.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

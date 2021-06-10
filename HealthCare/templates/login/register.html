@@ -6,14 +6,11 @@
             <div class="app-title">
                 <h1>Login</h1>
             </div>
-
             <form method="POST" action="" class="login-form">
               {% csrf_token %}
                 <div class="control-group">
                 {{ form.username }}
-                
                 </div>
-
                 <div class="control-group">
                 {{ form.email}}
                 </div>   
@@ -24,7 +21,6 @@
                 {{ form.password2 }}
                 </div> 
                 <input class="btn btn-primary btn-large btn-block" type="submit" name="Register">
-
             </form>
             {{ form.errors }}
             <div class="d-flex justify-content-center links mt-8">
@@ -32,6 +28,7 @@
           </div>
         </div>
     </div>
+
     <script>
   
     //Query All input fields

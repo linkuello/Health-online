@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import auth
 
 
-@login_required(login_url='login/post_homepage')
+@login_required
 def home_view(request):
     user = request.user
     categories = Categories.objects.all()
@@ -141,7 +141,8 @@ def blog_weight_lost(request):
     return render(request, 'blog/weight_lost.html', locals())
 
 
-@login_required(login_url='login/blog_homepage')
+
+@login_required
 def like(request, slug):
     user = request.user
     post = get_object_or_404(Post, slug=slug)

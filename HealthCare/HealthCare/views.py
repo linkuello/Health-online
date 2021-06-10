@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponseRedirect
 from calories.forms import CreateUserForm
 from django.contrib import messages
-
+from fitforum.models import Post as fit_Post
 
 def homepage(request):
     if request.user is not None:
@@ -15,6 +15,7 @@ def homepage(request):
         username = user.username
 
     blog_posts = Post.objects.all().filter(enabled=True).order_by('-published',)[:3]
+    fitness_posts = fit_Post.objects.all().filter(enabled=True).order_by('-pub_time',)[:3]
     form_c = CommentForm()
 
     try:
@@ -57,7 +58,10 @@ def like(request, slug):
 
 def LoginPage(request, page=''):
     if request.user.is_authenticated:
-        return redirect(page)
+        if page == '':
+            redirect('homepage')
+        else:
+            redirect(page)
     else:
         # if request.session.test_cookie_worked():
         #     request.session.delete_test_cookie()
@@ -90,7 +94,7 @@ def LoginPage(request, page=''):
                 else:
                     return redirect(page)
             else:
-                messages.info(request, 'Username or password is incorrect')
+                messages.warning(request, 'Username or password is incorrect')
         
         if request.COOKIES.get('c_username'):
             context = {
@@ -125,3 +129,9 @@ def RegisterPage(request):
         context = {'form':form}
 
         return render(request, 'login/register.html', context)
+
+
+def login1(request):
+
+
+    return render(request, 'login/login2.html', locals())
