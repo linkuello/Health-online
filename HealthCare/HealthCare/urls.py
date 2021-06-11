@@ -40,5 +40,9 @@ urlpatterns = [
     url(r'myblog/', include('blog.urls')),
     url(r'^recipe/', include('recipe.urls')),
     url(r'^fitforum/', include('fitforum.urls')),
+    url(r'^contact/', include('contact.urls')),
+    url(r'^discuss/', include('Discussion_forum.urls')),
+    url(r'^captcha/', include('captcha.urls')),
+
 
 ] + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)

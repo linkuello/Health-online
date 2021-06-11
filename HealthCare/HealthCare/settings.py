@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'media',
     'recipe',
     'fitforum',
+    'contact',
     'calories.apps.CaloriesConfig',
     'django_filters',
     'captcha',
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'registration',
     'materializecssform',
+    'Discussion_forum',
 
 ]
 
@@ -94,8 +96,21 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+
+    'HealthCare_db': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'HealthCare_db',
+        'USER': 'user',
+        # 'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '',
+        'OPTIONS': {
+            'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
+    },
 }
+
 
 #  Auth Login
 ACCOUNT_ACTIVATION_DAYS = 7
