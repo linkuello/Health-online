@@ -27,7 +27,7 @@
 {% block Top_href_drop %}
     {% if username %}
         <ul id='feature-dropdown' class='dropdown-content'>
-          <li><a href="{% url 'profile'%}">My Profile</a></li>
+          <li><a href="{% url 'my_profile'%}">My Profile</a></li>
         </ul>
     {% endif %}
 {% endblock %}
@@ -74,7 +74,7 @@
     <li><a href="{% url 'discuss_home' %}">Community</a></li>
     {% if username %}
         <li><a class="subheader"><i class="material-icons">perm_identity</i>Hi, {{ username | upper }}</a></li>
-        <li><a href="{% url 'profile' %}">My Profile</a></li>
+        <li><a href="{% url 'my_profile' %}">My Profile</a></li>
         <li><a href="{% url 'logout' %}">Logout</a></li>
     {% else %}
         <li><a href="{% url 'login' %}"><i class="material-icons">perm_identity</i>Login</a></li>

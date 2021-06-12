@@ -28,7 +28,7 @@ def HomePageView(request):
 		
 	# showing all food consumed present day
 
-	all_food_today=PostFood.objects.filter(profile=calories)
+	all_food_today = PostFood.objects.filter(profile=calories)
 	
 	calorie_goal_status = calorie_goal -calories.total_calorie
 	over_calorie = 0

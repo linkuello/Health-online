@@ -2,42 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00085ad-3b33-4ce8-a23e-bd454c6721dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/migrations/0002_discussion_name.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/migrations/0003_discussion_mood.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Discussion_forum/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/migrations/0002_auto_20210611_1646.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/migrations/0003_auto_20210611_2255.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contact/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fitforum/migrations/0008_auto_20210611_0149.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/contact_base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dis_forum/addInDiscussion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dis_forum/addInForum.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dis_forum/forum_base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dis_forum/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/migrations/0002_auto_20210612_1327.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/migrations/0003_auto_20210612_1331.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/migrations/0004_auto_20210612_1334.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/migrations/0005_auto_20210612_1529.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/migrations/0006_auto_20210612_1554.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/healthprofile/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/user_default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profile/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profile/profile_base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profile/update_contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profile/update_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profile/user_info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HealthCare/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/HealthCare/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HealthCare/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/HealthCare/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calories/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/calories/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/full-header.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main_homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main_homepage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,16 +74,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/dis_forum" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/healthprofile" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/healthprofile" />
+      <recent name="$PROJECT_DIR$/templates/profile" />
       <recent name="$PROJECT_DIR$/templates/dis_forum" />
       <recent name="$PROJECT_DIR$/templates/contact" />
       <recent name="$PROJECT_DIR$/templates/fitforum" />
-      <recent name="$PROJECT_DIR$/templates/calories" />
-      <recent name="$PROJECT_DIR$/templates/login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
@@ -146,7 +137,9 @@
       <workItem from="1623323306823" duration="100000" />
       <workItem from="1623342351766" duration="9851000" />
       <workItem from="1623381589114" duration="31549000" />
-      <workItem from="1623423040347" duration="6925000" />
+      <workItem from="1623423040347" duration="7130000" />
+      <workItem from="1623430242168" duration="18000" />
+      <workItem from="1623469610657" duration="14792000" />
     </task>
     <servers />
   </component>

@@ -43,6 +43,7 @@ urlpatterns = [
     url(r'^contact/', include('contact.urls')),
     url(r'^discuss/', include('Discussion_forum.urls')),
     url(r'^captcha/', include('captcha.urls')),
+    url(r'^profile/', include('healthprofile.urls')),
 
 
 ] + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)

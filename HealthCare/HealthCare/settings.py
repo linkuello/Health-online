@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'registration',
     'materializecssform',
     'Discussion_forum',
+    'phonenumber_field',
+    'healthprofile',
 
 ]
 
