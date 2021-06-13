@@ -55,6 +55,7 @@ def yoga(request,tvno=0):
 	{'name':'High Level of Yoga','tvcode1':'BaFvtLpfL9U','tvcode2':'C1uSrTmyh9E','tvcode3':'jSBSGmg9j20','tvcode4':'EzClp1CiW5o','tvcode5':'uoMXtHa3CXg','tvcode6':'Ec4RuC_5Moc'},
 	{'name':'Better Sleep Yoga ','tvcode1':'v7SN-d4qXx0','tvcode2':'E9LVKL2pGmo','tvcode3':'9lNiQIEfOAU','tvcode4':'bk71G6dXemc','tvcode5':'8Bi3Q20XrBM','tvcode6':'LI9upn4t9n8'}]
 	now=datetime.now()
+	hour= now.timetuple().tm_hour
 	tvno=tvno
 	tv=tv_list[int(tvno)]
 	return render(request,'fitforum/yoga.html',locals())

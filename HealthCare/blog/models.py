@@ -19,7 +19,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=250)
     slug = models.SlugField(unique=True, max_length=100)
-    description = models.TextField(max_length=250)
+    description = models.TextField(max_length=10000)
     content = models.TextField(default='(empty)')
     published = models.DateField(auto_now_add=True)
     pic = models.ImageField(upload_to='pics', null=True, blank=True, default='default.png')
