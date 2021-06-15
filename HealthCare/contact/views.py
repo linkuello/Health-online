@@ -7,16 +7,15 @@ from django.contrib import messages
 
 def contact(request):
 	message_sub1 = models.message_subject_1.objects.all()
-	form_q1 = forms.ContactMsmSub1Form()
+	form_q1 = forms.create_form2()
 
 	if request.method == 'GET':
-		form_res_q1 = forms.ContactMsmSub1Form(request.GET)
+		form_res_q1 = form_q1(request.GET)
 
 		if form_res_q1.is_valid():
 			category = models.message_subject_1.objects.get(title=str(request.GET['category']))
 			message_sub2 = models.message_subject_2.objects.filter(category=category)
 			form_q2 = forms.create_form(str(request.GET['category']), category)
-			request.session['category_form'] = str(request.GET['category'])
 
 	if request.method == "POST":
 		category = request.session['category_form']

@@ -23,7 +23,7 @@ class ProfileForm(forms.ModelForm):
 		super(ProfileForm, self).__init__(*args, **kwargs)
 		self.fields['profile_picture'].label = 'Profile Picture'
 		self.fields['country'].label = 'Country'
-		self.fields['gender'].label = 'Gender'
+		self.fields['gender'].label = 'Male'
 		self.fields['BOD'].label = 'BOD'
 		self.fields['self_introduction'].label = 'Self Introduction'
 		self.fields['expertise'].label = 'Expertise'

@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e00085ad-3b33-4ce8-a23e-bd454c6721dc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/contact/migrations/0005_auto_20210615_1035.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitforum/migrations/0010_auto_20210615_1035.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/pics/test_gT3OcVx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipe/migrations/0009_auto_20210615_1035.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calories/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/calories/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calories/migrations/0002_auto_20200926_1854.py" beforeDir="false" afterPath="$PROJECT_DIR$/calories/migrations/0002_auto_20210530_1854.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contact/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/healthprofile/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/healthprofile/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main_homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main_homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile/update_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/update_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile/user_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile/user_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HealthCare_0612_v2.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,16 +61,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/healthprofile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/contact" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/contact" />
       <recent name="$PROJECT_DIR$/healthprofile" />
       <recent name="$PROJECT_DIR$/templates/profile" />
       <recent name="$PROJECT_DIR$/templates/dis_forum" />
       <recent name="$PROJECT_DIR$/templates/contact" />
-      <recent name="$PROJECT_DIR$/templates/fitforum" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static" />
@@ -113,7 +127,12 @@
       <workItem from="1623423040347" duration="7130000" />
       <workItem from="1623430242168" duration="18000" />
       <workItem from="1623469610657" duration="15123000" />
-      <workItem from="1623600071878" duration="598000" />
+      <workItem from="1623600071878" duration="2039000" />
+      <workItem from="1623603213781" duration="654000" />
+      <workItem from="1623723718160" duration="644000" />
+      <workItem from="1623724927228" duration="1386000" />
+      <workItem from="1623726678700" duration="356000" />
+      <workItem from="1623740810712" duration="930000" />
     </task>
     <servers />
   </component>

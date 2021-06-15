@@ -36,7 +36,7 @@
     <div class="carousel carousel-slider center" data-indicators="true">
       <div class="carousel-item white-text" href="#one!">
         <div class="container valign-wrapper">
-          <a href="myblog/">
+          <a href="{% url 'blog_homepage' %}">
               <h1>#OUR BLOG</h1>
           </a>
           <div class="tagline">COME IN WE WANT TO SHARE YOU SOMETHINGS!</div>
@@ -44,7 +44,7 @@
       </div>
       <div class="carousel-item white-text" href="#two!">
         <div class="container valign-wrapper">
-            <a href="calories/">
+            <a href="{% url 'home' %}">
                 <h1>PROFESSIONAL DESIGN</h1>
             </a>
           <div class="tagline">Dedicated to you</div>
@@ -52,7 +52,9 @@
       </div>
       <div class="carousel-item white-text" href="#three!">
         <div class="container valign-wrapper">
-          <h1>LETS MAKE SOMETHING</h1>
+            <a href="{% url 'food_recipe' %}">
+                <h1>LETS MAKE SOMETHING</h1>
+            </a>
           <div class="tagline">together</div>
         </div>
       </div>

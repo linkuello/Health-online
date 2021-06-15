@@ -19,14 +19,6 @@ class ContactForm(forms.ModelForm):
 		self.fields['captcha'].label = "Verification"
 
 
-class ContactMsmSub1Form(forms.Form):
-	message_sub1 = models.message_subject_1.objects.all()
-	choices = []
-	for m in message_sub1:
-		choices.append([str(m), str(m)])
-	category = forms.ChoiceField(label='Message Subject', choices=choices, required=True,)
-
-
 def create_form(catg1=None, catg2=None):
 
 	class ContactForm1(forms.Form):
@@ -61,3 +53,14 @@ def create_form(catg1=None, catg2=None):
 		form = ContactForm3
 
 	return form
+
+
+def create_form2():
+	class ContactMsmSub1Form(forms.Form):
+		message_sub1 = models.message_subject_1.objects.all()
+		choices = []
+		for m in message_sub1:
+			choices.append([str(m), str(m)])
+		category = forms.ChoiceField(label='Message Subject', choices=choices, required=True, )
+
+	return ContactMsmSub1Form
