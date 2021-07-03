@@ -115,15 +115,15 @@ DATABASES = {
 
 
 #  Auth Login
-ACCOUNT_ACTIVATION_DAYS = 7
-EMAIL_HOST= 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD= 'wgsmpgugogthhlhh'
-EMAIL_HOST_USER	= 'cscheng5282@gmail.com'
-EMAIL_PORT= 587
-EMAIL_USE_TLS = True
+# ACCOUNT_ACTIVATION_DAYS = 7
+# EMAIL_HOST= 'smtp.gmail.com'
+# EMAIL_HOST_PASSWORD=
+# EMAIL_HOST_USER	=
+# EMAIL_PORT= 587
+# EMAIL_USE_TLS = True
 
-SITE_ID=1
-LOGIN_REDIRECT_URL= '/'
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',

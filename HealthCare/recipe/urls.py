@@ -1,5 +1,4 @@
-from django.contrib import admin
-from django.urls import path,include
+from django.urls import path
 from recipe.views import food_recipe,food_specific,add_recipe
 
 urlpatterns = [

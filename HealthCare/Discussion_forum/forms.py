@@ -4,12 +4,12 @@ from django import forms
 
 class CreateInForum(ModelForm):
     class Meta:
-        model= forum
+        model = forum
         fields = "__all__"
 
 
 
 class CreateInDiscussion(ModelForm):
     class Meta:
-        model= Discussion
+        model = Discussion
         fields = "__all__"

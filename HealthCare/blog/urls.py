@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home_view, detail_view, tagged, homepage, test, blog_sport, blog_weight_lost, like, show_my_posts, delete_my_posts
+from .views import home_view, detail_view, tagged, homepage, blog_sport, blog_weight_lost, like, show_my_posts, delete_my_posts
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -13,6 +13,5 @@ urlpatterns = [
     path('DeletePosts/<int:id>/', delete_my_posts, name='blog_delete_my_posts'),
     path('sport', blog_sport, name='blog_sport'),
     path('weight_lost', blog_weight_lost, name='blog_weight_lost'),
-    path('test/', test),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,7 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse,Http404
 from fitforum import models
-import random
 from datetime import datetime
 # Create your views here.
 
@@ -20,7 +18,6 @@ def index(request):
 		message = 'If you want to post a message,you must fill in each field...'
 	if user_id!=None:
 		level=models.Level.objects.get(status=user_level)
-		#post=models.Post.objects.create(mood=mood,nickname=user_id,del_pass=user_pass,message=user_post,byear=user_byear,enabled=True)
 		post=models.Post.objects.create(level=level,nickname=user_id,message=user_post,byear=user_byear,enabled=True)
 		post.save()
 		message='Successfully saved'

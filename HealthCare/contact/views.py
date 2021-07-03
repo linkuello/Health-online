@@ -33,7 +33,6 @@ def contact(request):
 		else:
 			messages.warning(request, "Please Check Your Message Is CORRECT Or Not")
 
-
 	# if request.method == "POST":
 	# 	form = forms.ContactForm(request.POST)
 	# 	if form.is_valid():

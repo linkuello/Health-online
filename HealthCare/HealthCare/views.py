@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from blog.models import Post, Categories, Likes
+from blog.models import Post, Likes
 from blog.forms import CommentForm
 from blog import models
 from django.contrib.auth.decorators import login_required

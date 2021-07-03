@@ -1,6 +1,7 @@
 from django.db import models
 # Create your models here.
 
+
 class message_subject_1(models.Model):
 	subject = [
 		['blog', 'I have a problem about my post'],
@@ -25,7 +26,6 @@ class message_subject_2(models.Model):
 
 class Contact(models.Model):
 	user_name = models.CharField(max_length=50, default="(No Name)")
-	# message_subject = models.ForeignKey(message_subject_1, null=False, on_delete=models.SET_DEFAULT, default=4)
 	message_subject2 = models.ForeignKey(message_subject_2, null=True, on_delete=models.SET_DEFAULT, default=6)
 	user_email = models.CharField(max_length=50)
 	user_message = models.CharField(max_length=100)

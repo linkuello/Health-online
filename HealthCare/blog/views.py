@@ -6,7 +6,6 @@ from blog import models
 from taggit.models import Tag
 from django.template.defaultfilters import slugify
 from django.contrib.auth.decorators import login_required
-from django.contrib import auth
 
 
 @login_required
@@ -160,7 +159,7 @@ def like(request, slug):
     post.likes = current_likes
     post.save()
 
-    return redirect('blog_homepage')
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 @login_required(login_url='login/blog_show_my_posts')
@@ -198,29 +197,3 @@ def delete_my_posts(request, id=None):
             post.delete()
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
-
-def test(request):
-    categories = Categories.objects.all()
-    posts = Post.objects.all().order_by('-published', )
-    common_tags = Post.tags.most_common()[:4]
-    form = PostForm(request.POST, request.FILES)
-    post_form = PostForm()
-    if form.is_valid():
-        newpost = form.save(commit=False)
-        newpost.slug = slugify(newpost.title)
-        newpost.save()
-        form.save_m2m()
-    # else:
-    #     c_t = request.POST['title']
-    #     c_d = request.POST['description']
-    #     c_c = request.POST['content']
-    #     c_t = request.POST['tags']
-
-    context = {
-        'posts': posts,
-        'common_tags': common_tags,
-        'form': form,
-    }
-
-    return render(request, 'blog/Blog_test.html', locals())

@@ -1,7 +1,6 @@
-from django.contrib import admin
-from django.urls import path,include
+from django.urls import path
 import fitforum.views as fitforum
-from fitforum.views import fitness,yoga
+
 
 urlpatterns = [
     path('',fitforum.index,name='fitforum'),
