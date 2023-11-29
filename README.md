@@ -1,5 +1,5 @@
 # HealthCare Website
-A health care community and self-healthy management system built using the Django framework. Users can easily post content and engage in social interactions (view, comment, like), while also enjoying a wealth of health channel videos, curated recipe recommendations, and a convenient BMI calculator.
+A health care community and self-healthy management system built using the Django framework. Users can easily post content and engage in social interactions (view, comment, like), while also enjoying a wealth of health channel videos, curated recipe recommendations, and a convenient BMI and calories calculator.
 
 ## Installation
 
