@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls import url
 from django.conf.urls.static import static
 from django.conf import settings
 from .views import homepage, like, LoginPage, LogOutPage, RegisterPage
@@ -37,13 +36,11 @@ urlpatterns = [
     path('logout/', LogOutPage, name='logout'),
     path('register/', RegisterPage, name='register'),
     path('calories/', include('calories.urls')),
-    url(r'myblog/', include('blog.urls')),
-    url(r'^recipe/', include('recipe.urls')),
-    url(r'^fitforum/', include('fitforum.urls')),
-    url(r'^contact/', include('contact.urls')),
-    url(r'^discuss/', include('Discussion_forum.urls')),
-    url(r'^captcha/', include('captcha.urls')),
-    url(r'^profile/', include('healthprofile.urls')),
-
-
-] + static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)
+    path('myblog/', include('blog.urls')),
+    path('recipe/', include('recipe.urls')),
+    path('fitforum/', include('fitforum.urls')),
+    path('contact/', include('contact.urls')),
+    path('discuss/', include('Discussion_forum.urls')),
+    path('captcha/', include('captcha.urls')),
+    path('profile/', include('healthprofile.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
